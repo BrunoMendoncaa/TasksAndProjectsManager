@@ -13,4 +13,8 @@ routerProjects.get('/projects/:id', controllerProjects.getProjectById)
 
 //PUT
 routerProjects.put('/projects/:id', controllerProjects.updateProjectById)
+
+//DELETE
+routerProjects.delete('/projects/:id', controllerProjects.deleteProjectById)
+
 export default routerProjects

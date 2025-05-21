@@ -1,5 +1,4 @@
-import uuid4
- from "uuid4"
+import uuid4 from "uuid4"
 class modelProjects{
       constructor(){
             this.projects = []
@@ -38,6 +37,16 @@ class modelProjects{
             project['changedAt'] = new Date()
 
             return project
+      }
+
+      async deleteProjectById(id){
+            const index = this.projects.findIndex(project => project.id === id)
+            if(index === -1){
+                  return false
+            }else{
+                  this.projects.slice(index, 1)
+                  return true
+            }
       }
 }
 

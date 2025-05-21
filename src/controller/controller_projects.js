@@ -29,6 +29,13 @@ class controllerProjects{
       
             return res.status(200).json(project)
       }
+
+      async deleteProjectById(req, res){
+            const finded = await modelProjects.deleteProjectById(req.params.id)
+            if(!finded){return res.status(404).json({'Message':'Projeto não localizado'})}
+            
+            return res.status(200).send('ok')
+      }
 }
 
 export default new controllerProjects
