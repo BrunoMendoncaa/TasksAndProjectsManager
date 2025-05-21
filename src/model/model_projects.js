@@ -16,6 +16,15 @@ class modelProjects{
 
             return newProject
       }
+
+      async getAllProjects(){
+            return this.projects
+      }
+
+      async getProjectById(id){
+            const project = this.projects.find(project => project.id === id)
+            return project
+      }
 }
 
 export default new modelProjects()
