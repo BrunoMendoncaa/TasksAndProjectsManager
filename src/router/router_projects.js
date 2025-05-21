@@ -16,5 +16,6 @@ routerProjects.put('/projects/:id', logRouter, validateProjectID, controllerProj
 
 //DELETE
 routerProjects.delete('/projects/:id', logRouter, validateProjectID, controllerProjects.deleteProjectById)
+routerProjects.delete('/projects/delete/:id', logRouter, validateProjectID, controllerProjects.deleteProjectById)
 
 export default routerProjects

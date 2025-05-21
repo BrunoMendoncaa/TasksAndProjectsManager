@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1747851534523" clover="3.2.0">
-  <project timestamp="1747851534523" name="All files">
-    <metrics statements="59" coveredstatements="58" conditionals="27" coveredconditionals="26" methods="17" coveredmethods="17" elements="103" coveredelements="101" complexity="0" loc="59" ncloc="59" packages="5" files="5" classes="5"/>
+<coverage generated="1747852818967" clover="3.2.0">
+  <project timestamp="1747852818967" name="All files">
+    <metrics statements="60" coveredstatements="60" conditionals="28" coveredconditionals="28" methods="17" coveredmethods="17" elements="105" coveredelements="105" complexity="0" loc="60" ncloc="60" packages="5" files="5" classes="5"/>
     <package name="src">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="server.js" path="C:\Users\Bruno mendonça\Desktop\Projetos\NodeJs\TasksAndProjectsManager\src\server.js">
@@ -32,22 +32,22 @@
       </file>
     </package>
     <package name="src.middlewares">
-      <metrics statements="13" coveredstatements="12" conditionals="13" coveredconditionals="12" methods="3" coveredmethods="3"/>
+      <metrics statements="13" coveredstatements="13" conditionals="14" coveredconditionals="14" methods="3" coveredmethods="3"/>
       <file name="middlewares_projects.js" path="C:\Users\Bruno mendonça\Desktop\Projetos\NodeJs\TasksAndProjectsManager\src\middlewares\middlewares_projects.js">
-        <metrics statements="13" coveredstatements="12" conditionals="13" coveredconditionals="12" methods="3" coveredmethods="3"/>
+        <metrics statements="13" coveredstatements="13" conditionals="14" coveredconditionals="14" methods="3" coveredmethods="3"/>
         <line num="2" count="3" type="stmt"/>
         <line num="4" count="3" type="cond" truecount="4" falsecount="0"/>
         <line num="5" count="1" type="stmt"/>
         <line num="8" count="2" type="cond" truecount="4" falsecount="0"/>
         <line num="9" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="17" count="8" type="stmt"/>
-        <line num="19" count="8" type="cond" truecount="4" falsecount="1"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="8" type="stmt"/>
-        <line num="26" count="12" type="stmt"/>
-        <line num="27" count="12" type="stmt"/>
-        <line num="28" count="12" type="stmt"/>
+        <line num="17" count="9" type="stmt"/>
+        <line num="18" count="9" type="cond" truecount="6" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="25" count="13" type="stmt"/>
+        <line num="26" count="13" type="stmt"/>
+        <line num="27" count="13" type="stmt"/>
       </file>
     </package>
     <package name="src.model">
@@ -80,15 +80,16 @@
       </file>
     </package>
     <package name="src.router">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="router_projects.js" path="C:\Users\Bruno mendonça\Desktop\Projetos\NodeJs\TasksAndProjectsManager\src\router\router_projects.js">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="5" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
       </file>
     </package>
   </project>

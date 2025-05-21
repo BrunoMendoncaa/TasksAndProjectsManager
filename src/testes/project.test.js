@@ -132,4 +132,12 @@ describe('DELETE - Deletar um projeto', () => {
 
             expect(response.statusCode).toBe(404)
       })
+
+      it('Não deve deletar um projeto', async () => {
+            const response = await request(app)
+                  .delete(`${root}/${undefined}`)
+
+            expect(response.statusCode).toBe(400)
+      })
+
 })
