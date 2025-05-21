@@ -11,4 +11,6 @@ routerProjects.post('/projects', validateProjectBody, controllerProjects.createN
 routerProjects.get('/projects',controllerProjects.getAllProjects)
 routerProjects.get('/projects/:id', controllerProjects.getProjectById)
 
+//PUT
+routerProjects.put('/projects/:id', controllerProjects.updateProjectById)
 export default routerProjects

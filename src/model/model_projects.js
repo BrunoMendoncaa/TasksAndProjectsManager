@@ -25,6 +25,20 @@ class modelProjects{
             const project = this.projects.find(project => project.id === id)
             return project
       }
+
+      async updateProjectById(id, body){
+            const {name, description} = body
+            const project = this.projects.find(project => project.id === id)
+            
+            if(!project){return}
+
+            if(name != undefined){project['name'] = name}
+            if(description != undefined){project['description'] = description}
+
+            project['changedAt'] = new Date()
+
+            return project
+      }
 }
 
 export default new modelProjects()

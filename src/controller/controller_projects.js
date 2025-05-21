@@ -21,6 +21,14 @@ class controllerProjects{
                   return res.status(200).json(project)
             }
       }
+
+      async updateProjectById(req,res){
+            const project = await modelProjects.updateProjectById(req.params.id, req.body)
+            
+            if(!project){return res.status(404).json({'Message': 'Projeto não localizado'})}
+      
+            return res.status(200).json(project)
+      }
 }
 
 export default new controllerProjects
