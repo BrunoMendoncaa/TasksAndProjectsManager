@@ -16,7 +16,7 @@ export function validateProjectBody(req, res, next){
 export function validateProjectID(req, res, next){
       const id = req.params.id
 
-      if(!id || id.trim === ''){
+      if(!id || id.trim === '' || id === undefined){
             return res.status(400).json({'Message':'ID é um parametro obrigatorio'})
       }
       next()
