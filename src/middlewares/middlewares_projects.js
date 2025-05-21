@@ -1,7 +1,4 @@
 export function validateProjectBody(req, res, next){
-      const logMessage = `Method [${req.method}] | Endepoint [${req.url}]`
-      console.log(logMessage)
-      
       const {name, description} = req.body
 
       if(!name || name.trim() == ''){
@@ -12,5 +9,21 @@ export function validateProjectBody(req, res, next){
             return res.status(400).json({'message':'Description é um argumento obrigatorio'})
       }
 
+      next()
+}
+
+
+export function validateProjectID(req, res, next){
+      const id = req.params.id
+
+      if(!id || id.trim === ''){
+            return res.status(400).json({'Message':'ID é um parametro obrigatorio'})
+      }
+      next()
+}
+
+export function logRouter(req,res,next){
+      const logMessage = `Method [${req.method}] | Endepoint [${req.url}]`
+      console.log(logMessage)
       next()
 }

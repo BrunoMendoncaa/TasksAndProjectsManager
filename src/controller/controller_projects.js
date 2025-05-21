@@ -6,9 +6,6 @@ class controllerProjects{
       }
 
       async getAllProjects(req, res){
-            const logMessage = `Method [${req.method}] | Endepoint [${req.url}]`
-            console.log(logMessage)
-
             const projects = await modelProjects.getAllProjects()
             return res.status(200).json(projects)
       }
