@@ -1,11 +1,12 @@
 import { Router } from 'express'
-import controller_tasks from '../controller/controller_tasks.js'
+import controllerTasks from '../controller/controller_tasks.js'
 import {validateRelationalID, validateTaskID, validateTaskBody} from '../middlewares/middlewares_tasks.js'
 import {logRouter} from '../middlewares/middlewares_projects.js'
 
 const routerTasks = Router()
 
 //POST
+routerTasks.post('/projects/:projectId/tasks', logRouter, validateRelationalID, validateTaskBody, controllerTasks.createNewTask)
 //GET
 //PUT
 //DELETE
