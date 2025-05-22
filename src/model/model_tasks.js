@@ -16,6 +16,14 @@ class modelTasks{
 
             return newTask
       }
+
+      async getAllTasksByProjectId(projectId){
+            const tasks = await this.tasks.filter(
+                  task => task.projectId === projectId
+            )
+
+            return tasks
+      }
 }
 
 export default new modelTasks()

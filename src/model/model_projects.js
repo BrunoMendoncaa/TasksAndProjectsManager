@@ -1,7 +1,15 @@
 import uuid4 from "uuid4"
 class modelProjects{
       constructor(){
-            this.projects = []
+            this.projects = [
+                  {
+                        "id": "abc",
+                        "name": "My project Node",
+                        "description": "My first project",
+                        "createdAt": "2025-05-22T14:59:10.894Z",
+                        "changedAt": ""
+                  }
+            ]
       }
 
       async createNewProject(body){

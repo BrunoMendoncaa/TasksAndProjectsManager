@@ -7,7 +7,10 @@ const routerTasks = Router()
 
 //POST
 routerTasks.post('/projects/:projectId/tasks', logRouter, validateRelationalID, validateTaskBody, controllerTasks.createNewTask)
+
 //GET
+routerTasks.get('/projects/:projectId/tasks', logRouter, validateRelationalID, validateTaskID, controllerTasks.getAllTasksByProjectId)
+
 //PUT
 //DELETE
 
