@@ -1,15 +1,7 @@
 import uuid4 from "uuid4"
 class modelProjects{
       constructor(){
-            this.projects = [
-                  {
-                        "id": "abc",
-                        "name": "My project Node",
-                        "description": "My first project",
-                        "createdAt": "2025-05-22T14:59:10.894Z",
-                        "changedAt": ""
-                  }
-            ]
+            this.projects = []
       }
 
       async createNewProject(body){
@@ -52,10 +44,13 @@ class modelProjects{
             if(index === -1){
                   return false
             }else{
-                  this.projects.slice(index, 1)
+                  this.projects = this.projects.filter(
+                        project => project.id != id
+                  )
                   return true
             }
       }
+
 }
 
 export default new modelProjects()

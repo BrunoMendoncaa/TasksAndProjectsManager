@@ -1,7 +1,14 @@
 import uuid4 from "uuid4"
 class modelTasks{
       constructor(){
-            this.tasks = []
+            this.tasks = [{
+                  "taskId": "meuid123",
+                  "projectId": "abc",
+                  "title": "novo titulo",
+                  "done": true,
+                  "createdAt": "2025-05-22T19:56:23.258Z",
+                  "changedAt": "2025-05-22T19:56:37.121Z"
+            }]
       }
 
       async createNewTask(body, projectId){
@@ -28,7 +35,7 @@ class modelTasks{
       async updateTaskById(taskId, body){
             const {title, done} = body
 
-            const task = await this.tasks.find(task => task.taskId === taskId)
+            const task = await this.tasks.find(task => task.taskId == taskId)
             if(task){
                   if(title != undefined){task['title'] = title}
                   if(done != undefined){task['done'] = done}
@@ -36,6 +43,24 @@ class modelTasks{
             }
 
             return task
+      }
+
+      async deleteTaskByTaskId(taskId){
+            
+            const index = this.tasks.findIndex(task => task.taskId === taskId)
+            if(index === -1){
+                  return false
+            }else{
+                  this.tasks = this.tasks.filter(
+                        task => task.taskId != taskId
+                  )
+                  return true
+            }
+      }
+
+
+      async getAllTasks(){
+            return this.tasks
       }
 }
 

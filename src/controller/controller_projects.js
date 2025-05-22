@@ -1,4 +1,5 @@
 import modelProjects from '../model/model_projects.js'
+
 class controllerProjects{
       async createNewProject(req, res){
             const newProject = await modelProjects.createNewProject(req.body)
@@ -33,6 +34,7 @@ class controllerProjects{
             
             return res.status(200).send('ok')
       }
+
 }
 
 export default new controllerProjects

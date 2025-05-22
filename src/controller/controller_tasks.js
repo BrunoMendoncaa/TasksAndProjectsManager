@@ -22,6 +22,21 @@ class controllerTasks{
 
             return res.status(200).json(task)
       }
+
+      async deleteTaskById(req, res){
+            const deleted = await modelTasks.deleteTaskByTaskId(req.params.taskId)
+            if(!deleted){
+                  return res.status(404).json({'message':'Task não localizada'})
+            }
+
+            return res.status(200).send('ok')
+      }
+
+      async getAllTasks(req, res){
+            const tasks = await modelTasks.getAllTasks()
+            return res.status(200).json(tasks)
+
+      }
 }
 
 export default new controllerTasks

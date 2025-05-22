@@ -22,7 +22,7 @@ export function validateProjectID(req, res, next){
 }
 
 export function logRouter(req,res,next){
-      const logMessage = `Method [${req.method}] | Endepoint [${req.url}]`
+      const logMessage = `Method [${req.method}] | Endepoint [${req.url}] | time [${new Date()}]`
       console.log(logMessage)
       next()
 }

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "test": "node --trace-warnings --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --trace-warnings --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
