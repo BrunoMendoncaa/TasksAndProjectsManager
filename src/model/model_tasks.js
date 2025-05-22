@@ -24,6 +24,19 @@ class modelTasks{
 
             return tasks
       }
+
+      async updateTaskById(taskId, body){
+            const {title, done} = body
+
+            const task = await this.tasks.find(task => task.taskId === taskId)
+            if(task){
+                  if(title != undefined){task['title'] = title}
+                  if(done != undefined){task['done'] = done}
+                  task['changedAt'] = new Date()
+            }
+
+            return task
+      }
 }
 
 export default new modelTasks()

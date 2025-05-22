@@ -13,6 +13,15 @@ class controllerTasks{
 
             return res.status(200).json(tasks)
       }
+
+      async updateTaskById(req, res){
+            const task = await modelTasks.updateTaskById(req.params.taskId, req.body)
+            if(task === undefined){
+                  return res.status(404).json({'message':'Task não localizada'})
+            }
+
+            return res.status(200).json(task)
+      }
 }
 
 export default new controllerTasks

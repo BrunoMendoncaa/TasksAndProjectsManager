@@ -12,6 +12,8 @@ routerTasks.post('/projects/:projectId/tasks', logRouter, validateRelationalID, 
 routerTasks.get('/projects/:projectId/tasks', logRouter, validateRelationalID, validateTaskID, controllerTasks.getAllTasksByProjectId)
 
 //PUT
+routerTasks.put('/tasks/:taskId', logRouter, controllerTasks.updateTaskById)
+
 //DELETE
 
 export default routerTasks
